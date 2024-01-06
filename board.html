@@ -44,7 +44,6 @@
 
 				<!-- Main -->
 				<style>
-					
 					.box {
 						display: flex;
 						flex-wrap: wrap;
@@ -77,21 +76,19 @@
 					margin-bottom: 1px; /* Adjust the bottom margin between the h4 and p */
 					margin-top: 1px; /* Add margin between h4 and image if needed */
 					}
-					/* Add this to your existing CSS */
 					/* Adjusting column width for smaller screens */
 					@media screen and (max-width: 480px) {
 					.col-4 {
 						width: 100%; /* Set columns to occupy full width on smaller screens */
 						margin-bottom: 10px; /* Adjust margin for better spacing */
 					}
-					}
-					/* Ensuring images fill their container */
-					.col-4 .image.fit img {
-					width: 100%;
-					height: auto; /* Allow image height to adjust proportionally */
-					object-fit: cover;
-					}
 
+					.col-4 .image.fit img {
+						height: auto; /* Allow image height to adjust proportionally */
+						object-fit: contain; /* Maintain image aspect ratio */
+						max-width: 100%; /* Prevent image from stretching beyond its container */
+					}
+					}
 
 
 				</style>
