@@ -79,16 +79,29 @@
 					/* Adjusting column width for smaller screens */
 					@media screen and (max-width: 480px) {
 					.col-4 {
-						width: 100%; /* Set columns to occupy full width on smaller screens */
-						margin-bottom: 10px; /* Adjust margin for better spacing */
+						width: 100% !important; /* Force columns to occupy full width on smaller screens */
+						margin-bottom: 20px; /* Adjust margin for better spacing */
+						display: block !important; /* Ensure columns stack vertically */
+					}
+
+					.col-4 .image.fit {
+						width: 100%; /* Ensure images take full width of their container */
+						display: block; /* Force images to be block elements */
+						margin-bottom: 10px; /* Add some bottom margin between images */
 					}
 
 					.col-4 .image.fit img {
+						width: 100%; /* Ensure images take full width of their container */
 						height: auto; /* Allow image height to adjust proportionally */
-						object-fit: contain; /* Maintain image aspect ratio */
-						max-width: 100%; /* Prevent image from stretching beyond its container */
 					}
 					}
+
+
+
+
+
+
+
 
 
 				</style>
